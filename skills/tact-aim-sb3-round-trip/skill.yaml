@@ -1,0 +1,5 @@
+name: tact_aim_sb3_round_trip
+title: Validate a regenerated TACT-AIM sb3
+description: Validate a regenerated TACT-AIM sb3 structurally before handing it to the user, so a TurboWarp IR error is caught before a real-device check; includes digest re-baselining.
+category: Work and knowledge
+include_in_prompt: false

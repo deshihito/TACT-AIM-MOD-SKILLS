@@ -1,0 +1,5 @@
+name: tact_aim_add_content
+title: Add content to TACT-AIM MODs (overview)
+description: Full procedure for adding a new weapon, item, character or concept to TACT-AIM-MYTHOLOGY/MOD: data records, mechanics hooks, costumes, tests, boot-digest re-baselining, and sb3 regeneration gates.
+category: Work and knowledge
+include_in_prompt: false

@@ -1,0 +1,5 @@
+name: tact_aim_add_character
+title: Add a new character to TACT-AIM MODs
+description: Procedure for adding a new character to TACT-AIM-MYTHOLOGY/MOD: Character_2/Character_tree records, tree link rule, startup overwrite trap, ability hooks, banner and mythic skins.
+category: Work and knowledge
+include_in_prompt: false
