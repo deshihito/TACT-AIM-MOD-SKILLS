@@ -32,7 +32,7 @@
 
 ## コスチューム / SVG
 
-- [ ] 登録が2箇所ともある（Pen_All.ts のコスチューム表 と tools/mythology-costumes.json）
+- [ ] 登録が2箇所ともある（`src/distilled/Pen_All/assets.ts` のコスチューム表 と `tools/mythology-costumes.json`）
 - [ ] キャラには banner がある（無いとツリー画面で詳細カードが無言で出ない）
 - [ ] 武器の `*` ショップカードが「* コスチュームの連続ブロック」の内側にある
       （manifest の `"after"` もブロック内を指定）
@@ -45,7 +45,7 @@
 
 - [ ] TS を編集したので、個別テストの前に `npx tsc` を回した
 - [ ] `npm test` 全合格。件数を直書きしている既存テストの期待値を更新した
-- [ ] Pen_All.ts を編集した場合、`npm run detranspile:check-distilled` の差分が
+- [ ] `src/distilled/Pen_All/` を編集した場合、`npm run detranspile:check-distilled` の差分が
       意図した文の追加・変更だけになっている
 - [ ] 起動ダイジェストの再基準化: 新旧の G 全項目を比較し、差分が
       「追加データ由来のリスト長と中身」だけであることを確認した

@@ -39,7 +39,7 @@ description: TACT-AIM 系 MOD へ新しいメイン武器を追加するとき�
      「ダメージ25の見えない幽霊弾」になる。寿命で素消えさせたい場合は
      生成物に `"-"`×6 を明示する。ピストルのプログラムが正形の見本。
      新規プログラムはアリティ表でパース検証してから入れる。
-4. Pen_All.ts の `Bullet_name` SList の末尾に弾名を追加。
+4. `src/distilled/Pen_All/state.ts` の `Bullet_name` SList の末尾に弾名を追加。
 
 ## 名前の完全一致（最重要）
 

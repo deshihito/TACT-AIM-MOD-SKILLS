@@ -11,7 +11,7 @@ description: TACT-AIM 系 MOD の SVG イラスト（コスチューム）を作
 
 ## 登録は2箇所必須
 
-- Pen_All.ts のコスチューム表 と `tools/mythology-costumes.json`
+- `src/distilled/Pen_All/assets.ts` のコスチューム表 と `tools/mythology-costumes.json`
   （detranspile フックが sb3 へ注入）。
 - 片方だけだと TS では出るが sb3 に入らない（逆も同じ）。
 - 生成は `tools/make_new_costumes.py`（キャラ・武器）と

@@ -38,8 +38,8 @@ MOD 用の追加を入れない。仕様の数値・デザイン判断はユー�
      書式に倣って「日付＋何を追加したか＋全比較で差分が何だけだったか」を追記する。
 - 件数を直書きしている既存テスト（例: pen-init の Weapon_name/Shop_menu/Bullet_name
   の長さ）も新しい件数へ更新する。
-- Pen_All.ts を編集したら `npm run detranspile:check-distilled` で差分が
-  意図した文の追加・変更だけになっているか確認する。
+- `src/distilled/Pen_All/` 配下を編集したら `npm run detranspile:check-distilled` で差分が
+  意図した文の追加・変更だけになっているか確認する（`assets.ts` / `state.ts` / `cloud.ts` / `world.ts` / `combat.ts` / `draw.ts` / `ui.ts` / `index.ts` に責務分割済み）。
 - sb3: `mkdir -p out && npm run detranspile:build-distilled` →
   `python3 tools/validate_sb3.py out/*.sb3`（0 issues）→
   `bash tools/verify-distilled.sh`（BOOT TEST: PASS = 往復等価）。
@@ -105,7 +105,7 @@ MOD 用の追加を入れない。仕様の数値・デザイン判断はユー�
      近接は `["名前", "Sword damage", ダメージ係数, 射程, 弧度, ノックバック,
      "Length", 6, 14, "-"×6, ""]` が大剣の型。ダメージ係数は発射者の
      攻撃倍率（クラウド field 24）と掛け算される。
-   - Pen_All.ts の `Bullet_name` SList の末尾に弾名を追加。
+   - `src/distilled/Pen_All/state.ts` の `Bullet_name` SList の末尾に弾名を追加。
 2. **反動で飛ぶ武器**: 挙動文字列に `近接反動NN` を入れる。推進力 = 50 − NN
    （大剣 = 近接反動20 → 30）。比率指定（例: 大剣の 1.5 倍 = 45）は NN = 05。
    反動は発射ごとの照準方向へ掛かる。
@@ -156,7 +156,7 @@ MOD 用の追加を入れない。仕様の数値・デザイン判断はユー�
 
 ## コスチューム / SVG の規則
 
-- 登録は **2 箇所必須**: Pen_All.ts のコスチューム表と
+- 登録は **2 箇所必須**: `src/distilled/Pen_All/assets.ts` のコスチューム表と
   `tools/mythology-costumes.json`（detranspile フックが sb3 へ注入）。
   片方だけだと TS では出るが sb3 に入らない（逆も同じ）。
 - **顔の向き**: コスチュームは **+x（右）向き**で描かれ、頭頂は **−x 側**。
